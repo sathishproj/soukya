@@ -1,0 +1,11 @@
+<section class="container mx-auto px-4 py-10">
+  <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="grid md:grid-cols-2 gap-4">
+    <input placeholder="Full name" formControlName="name">
+    <input placeholder="Email" formControlName="email">
+    <input placeholder="Phone" formControlName="phone">
+    <textarea placeholder="Your message" formControlName="message" class="md:col-span-2"></textarea>
+    <button class="md:col-span-2" type="submit" [disabled]="form.invalid">Send</button>
+  </form>
+  <p *ngIf="sent" class="mt-3 text-green-700">Thanks! We'll get back to you soon.</p>
+</section>

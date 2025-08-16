@@ -1,0 +1,74 @@
+/* Full page split layout */
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Left white background (30%) */
+.login-left {
+  flex: 0 0 30%;
+  background: #ffffff;
+  z-index: 1;
+}
+
+/* Right background image (70%) */
+.login-right {
+  flex: 0 0 70%;
+  background: url('../../../assets/auth_bg.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Login card overlay */
+.login-card {
+  position: absolute;
+  top: 50%;
+  left: 30%; /* starts at the border between white and image */
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 100%;
+  max-width: 625px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* Logo inside card */
+.logo {
+  display: block;
+  max-width: 180px;
+  margin: -420px 0px 20px 60px;
+  margin-bottom: 200px;
+}
+
+/* Input icons */
+.input-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+/* Button colors */
+.btn-primary {
+  background-color: #00bcd4;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+}
+
+/* Forgot password link */
+.forgot-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}

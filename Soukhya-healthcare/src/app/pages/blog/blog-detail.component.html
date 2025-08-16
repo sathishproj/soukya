@@ -1,0 +1,6 @@
+<section class="container mx-auto px-4 py-10" *ngIf="blog">
+  <h1 class="text-3xl font-bold">{{ blog.title }}</h1>
+  <article class="prose max-w-none mt-6" [innerHTML]="blog.body"></article>
+</section>
+<div *ngIf="!blog && !loading" class="container mx-auto px-4 py-10">Not found.</div>
+<div *ngIf="loading" class="container mx-auto px-4 py-10">Loading...</div>
